@@ -1,2 +1,2 @@
-# esri
+# ESRI
 GitHub repository for ESRI
