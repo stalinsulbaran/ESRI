@@ -1,0 +1,1 @@
+"CAD Layer: " + $feature.Layer + " - "+ "Entity: " + $feature.Entity + " - "+ "Fecha Actualización: " + Day($feature.DocUpdate) + "/" + Month($feature.DocUpdate) + "/" + Year($feature.DocUpdate) + " " + Hour($feature.DocUpdate) + ":" + Minute($feature.DocUpdate) + ":" + Second($feature.DocUpdate)
