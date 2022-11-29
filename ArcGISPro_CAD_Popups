@@ -1,4 +1,0 @@
-"Color: (" + $feature.Color + ")" + " / " + 
-"Entity Color: (" + $feature.EntColor + ")" + " / " + 
-"Layer Color: (" + $feature.LyrColor + ")" + " / " + 
-"Block Color: (" + $feature.BlkColor + ")"
