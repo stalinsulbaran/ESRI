@@ -2,5 +2,5 @@
 
 <div id="header" align="center">
   <h2>Repositorio GitHub del equipo de Infraestructura de ESRI Chile que incluye contenido de ejemplo como documentación, enlaces de interés, scripts, tutoriales, entre otros, relacionados con aplicaciones de ArcGIS.</h2>
-    <img src="https://www.esri.com/about/newsroom/wp-content/uploads/2022/03/construction-waste-wherenext-article-1920x10809-1.jpg" width="500"/> <img src="https://www.esri.com/content/dam/esrisites/en-us/infrastructure-management/assets/infrastructure-management-overview-tab-2.png" width="500"/>
+    <img src="https://www.esri.com/about/newsroom/wp-content/uploads/2022/03/construction-waste-wherenext-article-1920x10809-1.jpg" width="250"/> <img src="https://www.esri.com/content/dam/esrisites/en-us/infrastructure-management/assets/infrastructure-management-overview-tab-2.png" width="250"/> <img src="https://www.esri.com/content/dam/esrisites/en-us/infrastructure-management/assets/infrastructure-management-overview-tab-transportation.png" width="250"/> <img src="https://www.esri.com/content/dam/esrisites/en-us/infrastructure-management/assets/infrastructure-management-solar-infrastructure-secondary.jpg width="250"/>
 </div>
