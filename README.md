@@ -2,6 +2,6 @@
 
 <div id="header" align="center">
   <h2>Repositorio GitHub del equipo de Infraestructura de ESRI Chile que incluye contenido de ejemplo como documentación, enlaces de interés, scripts, tutoriales, entre otros, relacionados con aplicaciones de ArcGIS.    
-      Entre las industrias incluídas en Infraestructura están AEC (Arquitectura, Ingeniería y Construcción), Energía (Oil & Gas y Renovables), Transporte (Aereo, Marítimo y Terrestre) y Utilities (Aguas, Gas, Electricidad y Ttelecomunicaciones)</h2>
+      Entre las industrias incluídas en Infraestructura están AEC (Arquitectura, Ingeniería y Construcción), Energía (Oil & Gas y Renovables), Transporte (Aereo, Marítimo y Terrestre) y Utilities (Aguas, Gas, Electricidad y Telecomunicaciones)</h2>
     <img src="https://www.esri.com/about/newsroom/wp-content/uploads/2022/03/construction-waste-wherenext-article-1920x10809-1.jpg" width="200"/> <img src="https://www.esri.com/content/dam/esrisites/en-us/infrastructure-management/assets/infrastructure-management-overview-tab-2.png" width="200"/> <img src="https://www.esri.com/content/dam/esrisites/en-us/infrastructure-management/assets/infrastructure-management-overview-tab-transportation.png" width="200"/> <img src="https://www.esri.com/content/dam/esrisites/en-us/infrastructure-management/assets/infrastructure-management-overview-tab-3.png" width="200"/>
 </div>
