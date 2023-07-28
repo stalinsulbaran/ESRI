@@ -1,5 +1,5 @@
-#   <img src="https://yt3.ggpht.com/a/AATXAJwLs_9uMMY1ky9UJG5Wa85aKRF0l__7lRwjsg=s900-c-k-c0xffffffff-no-rj-mo" width="35"/> <center>Infraestructura ESRI Chile</center>
-
+<div id="title" align="center">#   <img src="https://yt3.ggpht.com/a/AATXAJwLs_9uMMY1ky9UJG5Wa85aKRF0l__7lRwjsg=s900-c-k-c0xffffffff-no-rj-mo" width="35"/> Infraestructura ESRI Chile
+</dv>
 <div id="header" align="center">
   <h2>Repositorio GitHub del equipo de Infraestructura de ESRI Chile que incluye contenido de ejemplo como documentación, enlaces de interés, scripts, tutoriales, entre otros, relacionados con aplicaciones de ArcGIS.    
       Entre las industrias incluídas en Infraestructura están AEC (Arquitectura, Ingeniería y Construcción), Energía (Oil & Gas y Renovables), Transporte (Aereo, Marítimo y Terrestre) y Utilities (Aguas, Gas, Electricidad y Telecomunicaciones)</h2>
