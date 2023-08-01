@@ -1,4 +1,4 @@
-<div id="title" align="center">   <h1><img src="https://yt3.ggpht.com/-WpWZp5mHmkc/AAAAAAAAAAI/AAAAAAAAAAA/hQqguALXxlU/s100-c-k-no/photo.jpg" width="35"/> Taller Gestión Moderna de Infraestructura con ArcGIS </h1></div>
+<div id="title" align="center">   <h1><img src="https://yt3.ggpht.com/-WpWZp5mHmkc/AAAAAAAAAAI/AAAAAAAAAAA/hQqguALXxlU/s100-c-k-no/photo.jpg" width="50"/> Taller Gestión Moderna de Infraestructura con ArcGIS </h1></div>
 
 <div id="header" align="center">
   <h2>Bienvenidos al repositorio GitHub con el contenido del Taller Gestión Moderna de Infraestrutura con ArcGIS.<br>
