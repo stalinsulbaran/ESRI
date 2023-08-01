@@ -1,1 +1,6 @@
-Taller de ArcGIS Field Maps Designer
+<div id="title" align="center">   <h1><img src="https://www.esri.com/content/dam/esrisites/en-us/arcgis/products/arcgis-field-maps/assets/arcgis-fieldmaps-banner-fg.png" width="35"/> Taller Gestión Moderna de Infraestructura con ArcGIS </h1></div>
+
+<div id="header" align="center">
+  <h2>Bienvenidos al repositorio GitHub con el contenido del Taller Gestión Moderna de Infraestrutura con ArcGIS. Este taller presentará las capacidades de la aplicación de terreno ArcGIS Field Maps, específicamente su componente Designer, donde se compartirán las mejores prácticas en la creación de formularios para la captura de datos en terreno de forma rápida y sencilla. Se mostrará un flujo de trabajo completo, desde la preparación del mapa hasta el diseño del formulario y la recopilación de datos sobre el terreno.</h2>
+    <img src="https://www.esri.com/about/newsroom/wp-content/uploads/2022/03/construction-waste-wherenext-article-1920x10809-1.jpg" width="200"/> <img src="https://www.esri.com/content/dam/esrisites/en-us/infrastructure-management/assets/infrastructure-management-overview-tab-2.png" width="200"/> <img src="https://www.esri.com/content/dam/esrisites/en-us/infrastructure-management/assets/infrastructure-management-overview-tab-transportation.png" width="200"/> <img src="https://www.esri.com/content/dam/esrisites/en-us/infrastructure-management/assets/infrastructure-management-overview-tab-3.png" width="200"/><br>
+</div>
