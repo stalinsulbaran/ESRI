@@ -4,5 +4,5 @@
   <h2>Bienvenidos al repositorio GitHub con el contenido del Taller Gestión Moderna de Infraestrutura con ArcGIS.<br>
     <br>
     Este taller presentará las capacidades de la aplicación ArcGIS Field Maps, específicamente su componente Designer, donde se compartirán las mejores prácticas en la creación de formularios para la captura de datos en terreno de forma rápida y sencilla. Se mostrará un flujo de trabajo completo, desde la preparación del mapa hasta el diseño del formulario y la recopilación de datos sobre el terreno.</h2><br>
-    <img src="https://www.esri.com/content/dam/esrisites/en-us/arcgis/products/arcgis-field-maps/assets/arcgis-fieldmaps-banner-fg.png" width="500"/><br>
+    <img src="https://www.esri.com/content/dam/esrisites/en-us/infrastructure-management/assets/infrastructure-management-overview-banner-v2.jpg" width="500"/><br>
 </div>
