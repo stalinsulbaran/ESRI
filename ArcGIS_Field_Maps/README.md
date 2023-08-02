@@ -1,4 +1,4 @@
-<div id="title" align="center">   <h1><img src="https://th.bing.com/th/id/OIP.bKjjigC_yxPQnbsGC7ZsAAAAAA?pid=ImgDet&rs=1" width="35"/> ArcGIS Field Maps </h1></div>
+<div id="title" align="center">   <h1><img src="https://th.bing.com/th/id/OIP.bKjjigC_yxPQnbsGC7ZsAAAAAA?pid=ImgDet&rs=1" width="41"/> ArcGIS Field Maps </h1></div>
 
 <div id="header" align="center">
   <h2>Bienvenidos al repositorio GitHub de la aplicación ArcGIS Field Maps.<br>
