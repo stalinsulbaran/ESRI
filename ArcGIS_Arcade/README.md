@@ -1,4 +1,4 @@
-<div id="title" align="center">   <h1>ArcGIS Arcade<br><br><img src="https://i.ytimg.com/vi/jAxisgj9yr8/hqdefault.jpg?sqp=-oaymwEjCPYBEIoBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLB_UvT2FZJ3HVgJNElzEdgiQ01EeQ"/></h1></div>
+<div id="title" align="center">   <h1>ArcGIS Arcade<br><br><img src="https://i.ytimg.com/vi/jAxisgj9yr8/hqdefault.jpg?sqp=-oaymwEjCPYBEIoBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLB_UvT2FZJ3HVgJNElzEdgiQ01EeQ" width="500"/></h1></div>
 
 <div id="header" align="center">
   <h2>Bienvenidos al repositorio GitHub de la aplicación ArcGIS Field Maps.<br>
