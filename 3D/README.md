@@ -1,4 +1,4 @@
-<div id="title" align="center">   <h1>ArcGIS 3D<br><br><img src="https://www.esri.com/content/dam/esrisites/en-us/arcgis/products/arcgis-3d-mapping/3d-gis-overview-st-fg-edit.mp4" width="250"/></h1></div>
+<div id="title" align="center">   <h1>ArcGIS 3D<br><br><img src="https://www.esri.com/content/dam/esrisites/en-us/arcgis/products/arcgis-3d-mapping/3d-gis-overview-5050.jpg" width="250"/></h1></div>
 
 <div id="header" align="center">
   <h2>Bienvenidos al repositorio GitHub de ArcGIS 3D para el sector de Infraestructura de ESRI Chile.<br>
