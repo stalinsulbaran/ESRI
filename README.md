@@ -1,4 +1,4 @@
-<div id="title" align="center">   <h1><img src="https://yt3.ggpht.com/a/AGF-l79FQDhsdWKf-weVHFIw1rWMpZu-1MTEafPT_A=s900-mo-c-c0xffffffff-rj-k-no" width="50"/> Desarrollos y Productos de ESRI </h1></div>
+<div id="title" align="center">   <h1><img src="https://yt3.ggpht.com/a/AGF-l79FQDhsdWKf-weVHFIw1rWMpZu-1MTEafPT_A=s900-mo-c-c0xffffffff-rj-k-no" width="45"/> Desarrollos y Productos de ESRI </h1></div>
 
 <div id="header" align="center">
   <h2>Repositorio GitHub para desarrollos y productos de ESRI, incluyendo contenido como documentación, enlaces de interés, scripts, tutoriales, entre otros, relacionados con aplicaciones de ArcGIS.</h2><br>
