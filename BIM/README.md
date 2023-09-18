@@ -4,5 +4,5 @@
   <h2>Bienvenidos al repositorio GitHub de BIM y GIS.<br>
     <br>
     La transformación digital en el sector de la arquitectura, la ingeniería y la construcción (AEC) requiere que los profesionales utilicen conjuntamente datos geoespaciales y de diseño. ESRI se enfoca en la resolución de problemas mediante GIS a través de la integración de modelos BIM y la inteligencia de localización para impulsar mejoras en el sector de infraestructura.</h2><br>
-    <img src="https://www.esri.com/content/dam/esrisites/en-us/arcgis/products/arcgis-3d-mapping/3d-gis-overview-ct-3.jpg" width="500"/><br>
+    <img src="https://www.esri.com/content/dam/esrisites/en-us/industries/2021/aec/assets/gis-and-bim/gis-bim-5050-collaboration-cloud.jpg" width="500"/><br>
 </div>
