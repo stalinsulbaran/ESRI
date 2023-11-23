@@ -36,9 +36,9 @@
 
       arcgisRest
         .geocode({
-          address: "Ingresar dirección",
+          address: "Dirección", /* Ingresar la dirección */
           postal: 00000, /* Ingresar el código postal */
-          countryCode: "Ingresar País",
+          countryCode: "País", /* Ingresar el país */
           authentication
         })
         .then((response) => {
