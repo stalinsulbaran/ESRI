@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>ArcGIS REST JS</title>
+    <style>
+      body {
+        font-family: monospace;
+        color: white;
+      }
+      pre {
+        overflow: auto;
+        padding: 1rem;
+      }
+      body,
+      pre {
+        background: #000000;
+      }
+    </style>
+  </head>
+  <body>
+    <pre id="result"></pre>
+
+    <!-- equire librerías ArcGIS REST JS desde https://unpkg.com -->
+    <script src="https://unpkg.com/@esri/arcgis-rest-request@4.0.0/dist/bundled/request.umd.js"></script>
+    <script src="https://unpkg.com/@esri/arcgis-rest-geocoding@4.0.0/dist/bundled/geocoding.umd.js"></script>
+
+    <script>
+      /* cuando se incluye ArcGIS REST JS todas las exportaciones están disponibles
+    desde el mismo arcgisRest global */
+
+      const apiKey = "API_Key";
+
+      const authentication = arcgisRest.ApiKeyManager.fromKey(apiKey);
+
+      arcgisRest
+        .geocode({
+          params: {
+            category: "Categoría", /* Ingresar la categoría */
+            location: "x, y", /* Ingresar las coordenadas */
+            maxLocations: 20
+          },
+          outFields: "*",
+          authentication
+        })
+        .then((response) => {
+          console.log("Candidates:", response.candidates);
+          document.getElementById("result").textContent = JSON.stringify(response.candidates, null, 2);
+        });
+
+    </script>
+
+  </body>
+</html>
