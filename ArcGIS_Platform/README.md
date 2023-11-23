@@ -4,6 +4,6 @@
   <h2>Bienvenidos al repositorio GitHub de ArcGIS Platform para el sector Infraestructura de ESRI Chile.<br>
     <br>
     ArcGIS Platform ofrece un PaaS asequible y flexible centrado en la localización para desarrolladores de software, empresas y organizaciones que necesitan incorporar la innovación en localización a sus productos, soluciones y sistemas.</h2><br>
-    <h3><b>Importante:</b> El contenido mostrado en este repositorio proveiene la documentación oficial de ArcGIS Platform ofrecida por ESRI Inc. en el siguiente enlace: https://developers.arcgis.com/</h3><br>
+    <h3><b>Importante:</b> El contenido mostrado en este repositorio, incluyo los códigos de ejemplo, proviene de la documentación oficial por ESRI Inc. en el enlace de ArcGIS Developers: https://developers.arcgis.com/</h3><br>
     <img src="https://www.esri.com/content/dam/esrisites/en-us/arcgis/location-services/overview/assets/arcgis-platform-large-banner-fg.png" width="350"/><br>
 </div>
