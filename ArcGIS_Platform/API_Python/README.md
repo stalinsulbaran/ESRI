@@ -3,6 +3,6 @@
 
 Administración de organizaciones SIG: gestión de usuarios, grupos, elementos y servidores, personalización del aspecto de su organización ArcGIS Enterprise o ArcGIS Online.<br><br>
 Gestión de contenidos: creación y publicación de contenidos (capas, mapas web, servicios), clonación y traslado de contenidos dentro de una organización y entre organizaciones, edición y actualización de capas y servicios.<br><br>
-Análisis espacial y ciencia de datos: wrangling e ingeniería de datos, trabajo con datos espaciales como pandas dataframes, análisis espacial, cartografía y visualización, machine learning y deep learning<br><br></h2><br><br>
+Análisis espacial y ciencia de datos: wrangling e ingeniería de datos, trabajo con datos espaciales como pandas dataframes, análisis espacial, cartografía y visualización, machine learning y deep learning<br><br></h2><br>
     <h3>Si desea conocer más detalles solo debe ingresar en el siguiente enlace: https://developers.arcgis.com/python/guide/overview-of-the-arcgis-api-for-python/</h3><br>
 </div>
