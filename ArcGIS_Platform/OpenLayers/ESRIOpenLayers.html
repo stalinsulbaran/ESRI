@@ -2,7 +2,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
-    <title>OpenLayers</title>
+    <title>ESRI OpenLayers</title>
 
     <style>
       html,
@@ -37,29 +37,29 @@
       /* Crear la vista y el zoom */
       map.setView(
         new ol.View({
-          center: ol.proj.fromLonLat([-70.5630588428333, -33.4073113821995]),
+          center: ol.proj.fromLonLat([X, Y]),
           zoom: 18
         })
       );
 
       /* Ingresar la API Key */
-      const apiKey = "AAPKb8c2910020444d0ea7ece665de5ba5b1FxdVBB72nYpOV7JIznI3Rlw_lWpz-fF4WmEYl0t6sCfsonJgq5_y7vUgh2CBhElR";
+      const apiKey = "API_Key";
 
       /* seleccionar el Mapa Base */
       const basemapId = "arcgis/streets"; 
 
       /* Añadir el Feature Layer */
-      const sedeESRIChile = new ol.layer.Vector({
+      const feature_Layer = new ol.layer.Vector({
         source: new ol.source.Vector({
           format: new ol.format.GeoJSON(),
-          url: `https://services2.arcgis.com/YnekfD3lwdpJ9Xy8/arcgis/rest/services/Sede_ESRI_Chile/FeatureServer/0/query?where=1%3D1&outFields=*&returnGeometry=true&f=pgeojson`
+          url: `Feature_Layer/query?where=1%3D1&outFields=*&returnGeometry=true&f=pgeojson`
         })
       });
 
       olms.apply(map, `https://basemapstyles-api.arcgis.com/arcgis/rest/services/styles/v2/styles/${basemapId}?token=${apiKey}`)
 
         .then(function (map) {
-          map.addLayer(sedeESRIChile);
+          map.addLayer(feature_Layer);
         });
 
         /* Añadir las ventanas emergentes (PopUps) */
@@ -67,17 +67,17 @@
       map.addOverlay(popup);
 
       map.on("click", (event) => {
-        let sedeNombre, sedeComuna;
+        let field1, field2;
 
-        const sedeESRI = map.getFeaturesAtPixel(event.pixel, {
-          layerFilter: (layer) => layer === sedeESRIChile
+        const layer1 = map.getFeaturesAtPixel(event.pixel, {
+          layerFilter: (layer) => layer === feature_Layer
         });
 
-        if (sedeESRI.length > 0) {
+        if (layer1.length > 0) {
 
-          const sedeNombre = sedeESRI[0].get("nombre");
-          const sedeComuna = sedeESRI[0].get("comuna");
-          popup.show(event.coordinate, `<b>${sedeNombre}</b></br>${sedeComuna}`);
+          const field1 = layer1[0].get("campo1");
+          const field2 = layer1[0].get("campo2");
+          popup.show(event.coordinate, `<b>${field1}</b></br>${field2}`);
 
         } else {
         popup.hide();
