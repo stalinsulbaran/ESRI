@@ -34,7 +34,7 @@
         container: "map", /* El id del elemento div */
         style: `https://basemapstyles-api.arcgis.com/arcgis/rest/services/styles/v2/styles/${basemapEnum}?token=${apiKey}`,
         zoom: 18, /* Zoom inicial */
-        center: [X, Y] // Ubicación inicial [Longitud, Latitude]
+        center: [X, Y] // Ubicación inicial [Longitud, Latitud]
       });
 
       map.once("load", () => {
