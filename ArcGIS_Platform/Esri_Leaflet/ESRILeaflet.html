@@ -49,15 +49,15 @@
       }).addTo(map);
 
       /* Seleccionar el Feature Layer y añadirlo al mapa */
-      var yourFeatureLayer = L.esri
+      var FeatureLayer = L.esri
         .featureLayer({
           url: "Feature_Layer"
         });
 
-      yourFeatureLayer.addTo(map);
+      FeatureLayer.addTo(map);
 
       /* Añadir la ventana emergente (PopUp) */
-      yourFeatureLayer.bindPopup(function (layer) {
+      FeatureLayer.bindPopup(function (layer) {
 
         return L.Util.template("<b>Campo1:</b> {campo1}<br><b>Campo2:</b> {campo2}</br><b>Campo3:</b> {campo3}", layer.feature.properties);
 
