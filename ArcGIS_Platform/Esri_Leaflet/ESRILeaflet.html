@@ -40,8 +40,8 @@
 
       /* Crear el  mapa e ingresar las coordendas (x, y) y zoom (mínimo y máximo) de la visualización */
       const map = L.map("map", {
-        minZoom: 2
-      }).setView([x, y], 18);
+        minZoom: 2 // Zoom mínimo
+      }).setView([x, y], 18); // Ubicación central de la vista y el zoom inicial
 
       /* Añadir el mapa base al mapa */
       L.esri.Vector.vectorBasemapLayer(basemapEnum, {
