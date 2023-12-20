@@ -27,31 +27,31 @@
 
     <script>
       /* Añadir la API Key */
-      const apiKey = "AAPKb8c2910020444d0ea7ece665de5ba5b1FxdVBB72nYpOV7JIznI3Rlw_lWpz-fF4WmEYl0t6sCfsonJgq5_y7vUgh2CBhElR";
+      const apiKey = "API_Key";
       const basemapEnum = "arcgis/streets"; /* Añadir el Mapa Base */
       /* Añadir el mapa */
       const map = new maplibregl.Map({
         container: "map", /* El id del elemento div */
         style: `https://basemapstyles-api.arcgis.com/arcgis/rest/services/styles/v2/styles/${basemapEnum}?token=${apiKey}`,
         zoom: 18, /* Zoom inicial */
-        center: [-70.5630588428333, -33.4073113821995] // Ubicación inicial [Longitud, Latitude]
+        center: [X, Y] // Ubicación inicial [Longitud, Latitude]
       });
 
       map.once("load", () => {
         // Este codigo inicia una vez que el mapa base haya terminado de cargarse.
 
         /* Añadir la fuente de datos como GeoJSON*/
-        map.addSource("sedeESRIChile", {
+        map.addSource("Feature_Layer", {
           type: "geojson",
-          data: "https://services2.arcgis.com/YnekfD3lwdpJ9Xy8/arcgis/rest/services/Sede_ESRI_Chile/FeatureServer/0/query?f=pgeojson&where=1=1",
+          data: "Feature_Layer/query?f=pgeojson&where=1=1",
 
         });
 
         /* Añadir el feature layer al mapa */
         map.addLayer({
-          id: "sedeESRIChile-circle",
+          id: "Feature_Layer-circle",
           type: "circle",
-          source: "sedeESRIChile",
+          source: "Feature_Layer",
 
           paint: {
             "circle-color": "hsla(0,0%,0%,0.75)",
@@ -62,24 +62,25 @@
           }
         });
 
-        map.on("click", "sedeESRIChile-circle", (e) => {
-          const sedeESRI = e.features[0];
+        map.on("click", "Feature_Layer-circle", (e) => {
+          const featureLayer = e.features[0];
 
           /* Añadir la ventana emergente (PopUps) */
           new maplibregl.Popup()
 
-            .setHTML("<b>ESRI Chile</b><br>Las Condes")
+            .setHTML("<b>Comentario1</b><br>Comentario2") /* Puede incluirse los campos del Feature Layer a través de las propiedades (Properties) del GeoJSON, por ejemplo: 
+            .setHTML(`<b>${featureLayer.properties.campo1}</b>${featureLayer.properties.campo2}`) */
 
-            .setLngLat(sedeESRI.geometry.coordinates)
+            .setLngLat(featureLayer.geometry.coordinates)
             .addTo(map);
 
         });
 
-        map.on("mouseenter", "sedeESRIChile-circle", () => {
+        map.on("mouseenter", "Feature_Layer-circle", () => {
           map.getCanvas().style.cursor = "pointer";
         });
 
-        map.on("mouseleave", "sedeESRIChile-circle", () => {
+        map.on("mouseleave", "Feature_Layer-circle", () => {
           map.getCanvas().style.cursor = "";
         });
 
