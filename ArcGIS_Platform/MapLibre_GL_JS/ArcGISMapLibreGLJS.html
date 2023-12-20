@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+    <script src=https://unpkg.com/maplibre-gl@3.2.1/dist/maplibre-gl.js></script>
+    <link href=https://unpkg.com/maplibre-gl@3.2.1/dist/maplibre-gl.css rel="stylesheet" />
+    <script src="https://unpkg.com/@esri/arcgis-rest-request@4.0.0/dist/bundled/request.umd.js"></script>
+    <script src="https://unpkg.com/@esri/arcgis-rest-feature-service@4.0.0/dist/bundled/feature-service.umd.js"></script>
+    <style>
+      html,
+      body,
+      #map {
+        padding: 0;
+        margin: 0;
+        height: 100%;
+        width: 100%;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        color: #323232;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="map"></div>
+
+    <script>
+      /* Añadir la API Key */
+      const apiKey = "AAPKb8c2910020444d0ea7ece665de5ba5b1FxdVBB72nYpOV7JIznI3Rlw_lWpz-fF4WmEYl0t6sCfsonJgq5_y7vUgh2CBhElR";
+      const basemapEnum = "arcgis/streets"; /* Añadir el Mapa Base */
+      /* Añadir el mapa */
+      const map = new maplibregl.Map({
+        container: "map", /* El id del elemento div */
+        style: `https://basemapstyles-api.arcgis.com/arcgis/rest/services/styles/v2/styles/${basemapEnum}?token=${apiKey}`,
+        zoom: 18, /* Zoom inicial */
+        center: [-70.5630588428333, -33.4073113821995] // Ubicación inicial [Longitud, Latitude]
+      });
+
+      map.once("load", () => {
+        // Este codigo inicia una vez que el mapa base haya terminado de cargarse.
+
+        /* Añadir la fuente de datos como GeoJSON*/
+        map.addSource("sedeESRIChile", {
+          type: "geojson",
+          data: "https://services2.arcgis.com/YnekfD3lwdpJ9Xy8/arcgis/rest/services/Sede_ESRI_Chile/FeatureServer/0/query?f=pgeojson&where=1=1",
+
+        });
+
+        /* Añadir el feature layer al mapa */
+        map.addLayer({
+          id: "sedeESRIChile-circle",
+          type: "circle",
+          source: "sedeESRIChile",
+
+          paint: {
+            "circle-color": "hsla(0,0%,0%,0.75)",
+            "circle-stroke-width": 1.5,
+            "circle-stroke-color": "white",
+            "circle-radius": 5 // radio del círculo de 5 pixels
+
+          }
+        });
+
+        map.on("click", "sedeESRIChile-circle", (e) => {
+          const sedeESRI = e.features[0];
+
+          /* Añadir la ventana emergente (PopUps) */
+          new maplibregl.Popup()
+
+            .setHTML("<b>ESRI Chile</b><br>Las Condes")
+
+            .setLngLat(sedeESRI.geometry.coordinates)
+            .addTo(map);
+
+        });
+
+        map.on("mouseenter", "sedeESRIChile-circle", () => {
+          map.getCanvas().style.cursor = "pointer";
+        });
+
+        map.on("mouseleave", "sedeESRIChile-circle", () => {
+          map.getCanvas().style.cursor = "";
+        });
+
+    });
+
+    </script>
+
+  </body>
+</html>
