@@ -48,7 +48,7 @@
       /* seleccionar el Mapa Base */
       const basemapId = "arcgis/streets"; 
 
-      /* Añadir el Feature Layer */
+      /* Añadir el Feature Layer como GeoJSON*/
       const feature_Layer = new ol.layer.Vector({
         source: new ol.source.Vector({
           format: new ol.format.GeoJSON(),
