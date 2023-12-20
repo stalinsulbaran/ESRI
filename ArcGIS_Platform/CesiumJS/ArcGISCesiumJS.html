@@ -23,13 +23,13 @@
   <div id="cesiumContainer"></div>
   <script>
     // Añadir la API Key de ArcGIS
-    const apiKey = "AAPKb8c2910020444d0ea7ece665de5ba5b1FxdVBB72nYpOV7JIznI3Rlw_lWpz-fF4WmEYl0t6sCfsonJgq5_y7vUgh2CBhElR";
+    const apiKey = "API_Key";
 
     Cesium.ArcGisMapService.defaultAccessToken = apiKey;
     // Añadir el Access Token de Cesium
     const authentication = arcgisRest.ApiKeyManager.fromKey(apiKey);
 
-    const cesiumAccessToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJjYTBjYjhiZS02MjY4LTRhYzctOGQ3Yi03NzE1ZjIyOGE2MTIiLCJpZCI6NTE0NzIsImlhdCI6MTYxODE2MTc3Mn0.LagRf7fOO4Q0ky62S1PxPSQ25lemnaGeH4oxGP81uYM";
+    const cesiumAccessToken = "Cesium_Access_Token ";
     Cesium.Ion.defaultAccessToken = cesiumAccessToken;
     // Añadir el mapa base de ArcGIS
     const arcGisImagery = Cesium.ArcGisMapServerImageryProvider.fromBasemapType(Cesium.ArcGisBaseMapType.SATELLITE, {
@@ -57,8 +57,8 @@
 
     });
     // Añadir el Feature Layer como  GeoJSON
-    const pointLayerName = "Sede_ESRI_Chile";
-    const pointLayerURL = "https://services2.arcgis.com/YnekfD3lwdpJ9Xy8/arcgis/rest/services/"+pointLayerName+"/FeatureServer/0";
+    const pointLayerName = "Feature_Layer";
+    const pointLayerURL = "Feature_Layer/"+pointLayerName+"/FeatureServer/0";
 
     arcgisRest.queryFeatures({
         url: pointLayerURL,
