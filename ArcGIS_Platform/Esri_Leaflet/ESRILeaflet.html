@@ -5,10 +5,10 @@
     <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
     <title>Esri Leaflet</title>
 
-    <!-- Cargar Leaflet from CDN -->
+    <!-- Cargar Leaflet desde CDN -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
-    <!-- Cargar Esri Leaflet from CDN -->
+    <!-- Cargar Esri Leaflet desde CDN -->
     <script src="https://unpkg.com/esri-leaflet@3.0.10/dist/esri-leaflet.js"></script>
     <script src="https://unpkg.com/esri-leaflet-vector@4.2.3/dist/esri-leaflet-vector.js"></script>
 
@@ -56,7 +56,7 @@
 
       yourFeatureLayer.addTo(map);
 
-      /* Añadir la ventana emergente (PopUps) */
+      /* Añadir la ventana emergente (PopUp) */
       yourFeatureLayer.bindPopup(function (layer) {
 
         return L.Util.template("<b>Campo1:</b> {campo1}<br><b>Campo2:</b> {campo2}</br><b>Campo3:</b> {campo3}", layer.feature.properties);
