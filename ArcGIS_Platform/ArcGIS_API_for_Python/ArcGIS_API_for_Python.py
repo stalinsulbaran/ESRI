@@ -39,11 +39,12 @@ incendios_capa = busqueda[0]
 incendios_capa
 
 
-# ## Visualizar el contendio en el mapa
+# ## Visualizar el contendio en el mapa con su leyenda
 
 # In[ ]:
 
 
 mapa.add_layer(incendios_capa)
+mapa.legend = True
 mapa
 
