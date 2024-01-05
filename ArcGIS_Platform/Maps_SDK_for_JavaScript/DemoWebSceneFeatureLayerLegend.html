@@ -27,8 +27,10 @@
       "esri/symbols/IconSymbol3DLayer",
   ], function(esriConfig, Map, SceneView, FeatureLayer, Legend, SimpleRenderer, SimpleMarkerSymbol, IconSymbol3DLayer) {
 
-    esriConfig.apiKey = "AAPKb8c2910020444d0ea7ece665de5ba5b1FxdVBB72nYpOV7JIznI3Rlw_lWpz-fF4WmEYl0t6sCfsonJgq5_y7vUgh2CBhElR";
+      /* Añadior la API Key */
+    esriConfig.apiKey = "API_Key";
 
+      /* Crear el renderer (Simbología) con sus detalles (tipo de simbolo, tamaño, color, contorno) */
     const renderer = new SimpleRenderer({
           symbol: new SimpleMarkerSymbol({
             size: 4,
@@ -37,39 +39,45 @@
           })
     });
 
-    const popupSedeESRIChile = {
-        "title": "Sede ESRI Chile",
-        "content": "<b>Nombre:</b> {nombre}<br><b>Comuna:</b> {comuna}<br><b>Región:</b> {region}"
+      /* Crear la ventana emergente (PopUp) */
+    const popupfeatureLayer = {
+        "title": "Título",
+        "content": "<b>Campo1:</b> {casmpo1}<br><b>Campo2:</b> {campo2}<br><b>Campo3:</b> {campo3}"
       }
-    
-    const sedeESRIChile = new FeatureLayer({
-        url: "https://services2.arcgis.com/YnekfD3lwdpJ9Xy8/arcgis/rest/services/Sede_ESRI_Chile/FeatureServer/0",
-        outFields: ["nombre","comuna","region"],
-        popupTemplate: popupSedeESRIChile,
+
+      /* Crear variable con el Feature Layer */
+    const featureLayer = new FeatureLayer({
+        url: "Feature_Layer",
+        outFields: ["campo1","campo2","campo3"],
+        popupTemplate: popupfeatureLayer,
         renderer: renderer
     });
 
+      /* Crear el mapa */
     const map = new Map({
       basemap: "arcgis/imagery", // Servicio de mapas base
       ground: "world-elevation", // Servicio de elevación
-      layers: [sedeESRIChile]
+      layers: [featureLayer]
     });
 
+      /* Crear la vista */
     const view = new SceneView({
       container: "viewDiv",
       map: map,
       camera: {
         position: {
-          x: -70.5630588428333, //Longitud
-          y: -33.4073113821995, //Latitud
-          z: 5000 //Altura en metros
+          x: X, //Longitud
+          y: Y, //Latitud
+          z: Z //Altura en metros
         },
-        tilt: 0
+        tilt: 0 // Inclinación
       }
       });
 
-    map.add(sedeESRIChile);
+      /* Se añade el mapa */
+    map.add(featureLayer);
 
+      /* Añadir la leyenda */
     view.ui.add(
           new Legend({
             view: view
