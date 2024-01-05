@@ -1,0 +1,87 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Web Scene</title>
+  <style>
+    html, body, #viewDiv {
+      padding: 0;
+      margin: 0;
+      height: 100%;
+      width: 100%;
+    }
+  </style>
+
+  <link rel="stylesheet" href="https://js.arcgis.com/4.28/esri/themes/light/main.css">
+  <script src="https://js.arcgis.com/4.28/"></script>
+
+  <script>
+    require([
+      "esri/config",
+      "esri/Map",
+      "esri/views/SceneView",
+      "esri/layers/FeatureLayer",
+      "esri/widgets/Legend",
+      "esri/renderers/SimpleRenderer",
+      "esri/symbols/SimpleMarkerSymbol",
+      "esri/symbols/IconSymbol3DLayer",
+  ], function(esriConfig, Map, SceneView, FeatureLayer, Legend, SimpleRenderer, SimpleMarkerSymbol, IconSymbol3DLayer) {
+
+    esriConfig.apiKey = "AAPKb8c2910020444d0ea7ece665de5ba5b1FxdVBB72nYpOV7JIznI3Rlw_lWpz-fF4WmEYl0t6sCfsonJgq5_y7vUgh2CBhElR";
+
+    const renderer = new SimpleRenderer({
+          symbol: new SimpleMarkerSymbol({
+            size: 4,
+            color: [255, 87, 51],
+            outline: null
+          })
+    });
+
+    const popupSedeESRIChile = {
+        "title": "Sede ESRI Chile",
+        "content": "<b>Nombre:</b> {nombre}<br><b>Comuna:</b> {comuna}<br><b>Región:</b> {region}"
+      }
+    
+    const sedeESRIChile = new FeatureLayer({
+        url: "https://services2.arcgis.com/YnekfD3lwdpJ9Xy8/arcgis/rest/services/Sede_ESRI_Chile/FeatureServer/0",
+        outFields: ["nombre","comuna","region"],
+        popupTemplate: popupSedeESRIChile,
+        renderer: renderer
+    });
+
+    const map = new Map({
+      basemap: "arcgis/imagery", // Servicio de mapas base
+      ground: "world-elevation", // Servicio de elevación
+      layers: [sedeESRIChile]
+    });
+
+    const view = new SceneView({
+      container: "viewDiv",
+      map: map,
+      camera: {
+        position: {
+          x: -70.5630588428333, //Longitud
+          y: -33.4073113821995, //Latitud
+          z: 5000 //Altura en metros
+        },
+        tilt: 0
+      }
+      });
+
+    map.add(sedeESRIChile);
+
+    view.ui.add(
+          new Legend({
+            view: view
+          }),
+          "bottom-left"
+        );
+
+    });
+  </script>
+
+</head>
+<body>
+  <div id="viewDiv"></div>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>ArcGIS Maps SDK for JavaScript</title>
+    <style>
+      html,
+      body,
+      #viewDiv {
+        padding: 0;
+        margin: 0;
+        height: 100%;
+        width: 100%;
+      }
+    </style>
+
+    <link rel="stylesheet" href="https://js.arcgis.com/4.28/esri/themes/light/main.css" />
+    <script src="https://js.arcgis.com/4.28/"></script>
+
+    <script>
+      require(["esri/Map", "esri/views/MapView", "esri/layers/FeatureLayer", "esri/widgets/Legend", "esri/symbols/SimpleMarkerSymbol", 
+      "esri/renderers/SimpleRenderer"], (Map, MapView, FeatureLayer, Legend, SimpleRenderer, SimpleMarkerSymbol) => {
+        
+        const map = new Map({
+          basemap: "topo-vector" // Seleccionar mapa base
+        });
+        
+        // Añadir Vista de maoa
+        const view = new MapView({
+          container: "viewDiv",
+          map: map,
+          zoom: 4, // Nivel de zoom
+          center: [-70, -33] // Ingresar Longitud y Latitud para el centro de la vista
+        });
+     
+        // Definir la ventana emergente del feature layer
+        const popupincendios = {
+          "title": "Satellite (VIIRS) Thermal Hotspots and Fire Activity",
+          "content": "<b>VIIRS I-4 brightness temp (K):</b> {bright_ti4}<br><b>Date VIIRS acquisition:</b> {acq_date}<br><b>UTC Time VIIRS acquisition:</b> {acq_time}<br><b>VIIRS I-5 brightness temp (K):</b> {bright_ti5}<br><b>Fire Radiative Power (MW):</b> {frp}"
+        }
+
+        /* Indicar url del servicio "Satellite (VIIRS) Thermal Hotspots and Fire Activity" del ArcGIS Living Atlas */
+        const incendios = new FeatureLayer({
+            url: "https://services9.arcgis.com/RHVPKKiFTONKtxq3/arcgis/rest/services/Satellite_VIIRS_Thermal_Hotspots_and_Fire_Activity/FeatureServer/0",
+            popupTemplate: popupincendios
+        });
+
+        /* Añadir feature layer */
+        map.add(incendios);
+
+        view.ui.add(
+          new Legend({
+            view: view
+          }),
+          "bottom-left"
+        );
+
+      });
+    </script>
+  </head>
+
+  <body>
+    <div id="viewDiv"></div>
+  </body>
+</html>
