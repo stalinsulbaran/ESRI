@@ -20,7 +20,8 @@
     <script>
       require(["esri/Map", "esri/views/MapView", "esri/layers/FeatureLayer", "esri/widgets/Legend", "esri/symbols/SimpleMarkerSymbol", 
       "esri/renderers/SimpleRenderer"], (Map, MapView, FeatureLayer, Legend, SimpleRenderer, SimpleMarkerSymbol) => {
-        
+
+        /* Añadir el mapa */
         const map = new Map({
           basemap: "topo-vector" // Seleccionar mapa base
         });
@@ -39,15 +40,16 @@
           "content": "<b>VIIRS I-4 brightness temp (K):</b> {bright_ti4}<br><b>Date VIIRS acquisition:</b> {acq_date}<br><b>UTC Time VIIRS acquisition:</b> {acq_time}<br><b>VIIRS I-5 brightness temp (K):</b> {bright_ti5}<br><b>Fire Radiative Power (MW):</b> {frp}"
         }
 
-        /* Indicar url del servicio "Satellite (VIIRS) Thermal Hotspots and Fire Activity" del ArcGIS Living Atlas */
+        /* Indicar url del servicio "Satellite (VIIRS) Thermal Hotspots and Fire Activity" del ArcGIS Living Atlas y agregar la ventana emergente */
         const incendios = new FeatureLayer({
             url: "https://services9.arcgis.com/RHVPKKiFTONKtxq3/arcgis/rest/services/Satellite_VIIRS_Thermal_Hotspots_and_Fire_Activity/FeatureServer/0",
             popupTemplate: popupincendios
         });
 
-        /* Añadir feature layer */
+        /* Añadir el feature layer */
         map.add(incendios);
 
+        /* Añadir la leyenda */
         view.ui.add(
           new Legend({
             view: view
