@@ -26,7 +26,7 @@
           basemap: "topo-vector" // Seleccionar mapa base
         });
         
-        // Añadir Vista de maoa
+        // Añadir la vista del mapa
         const view = new MapView({
           container: "viewDiv",
           map: map,
@@ -46,7 +46,7 @@
             popupTemplate: popupincendios
         });
 
-        /* Añadir el feature layer */
+        /* Añadir el feature layer en el mapa */
         map.add(incendios);
 
         /* Añadir la leyenda */
