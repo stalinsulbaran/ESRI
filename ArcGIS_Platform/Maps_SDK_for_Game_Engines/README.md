@@ -1,10 +1,7 @@
 <div id="header" align="center">
   <h1>ArcGIS Maps SDK for Game Engines</h1>
-  <h2>La API de ArcGIS para Python es una biblioteca Python moderna y poderosa compatible con las últimas versiones de ArcGIS Enterprise y ArcGIS Online, la cuál proporciona una experiencia de desarrollo coherente para la creación de secuencias de comandos y la automatización en todo el conjunto de productos ArcGIS.<br> Se utiliza para tres flujos de trabajo clave:<br><br>
-<ol>
-<li value="1">Administración de organizaciones SIG: gestión de usuarios, grupos, elementos y servidores, personalización del aspecto de su organización ArcGIS Enterprise o ArcGIS Online.</li><br>
-<li>Gestión de contenidos: creación y publicación de contenidos (capas, mapas web, servicios), clonación y traslado de contenidos dentro de una organización y entre organizaciones, edición y actualización de capas y servicios.</li><br>
-<li>Análisis espacial y ciencia de datos: wrangling e ingeniería de datos, trabajo con datos espaciales como pandas dataframes, análisis espacial, cartografía y visualización, machine learning y deep learning</li><br><br></h2>
-</ol>
+  <h2>Durante el año 2021 @esri anunció el prelanzamiento de ArcGIS Maps SDK for Game Engines. Este SDK ofrece la convergencia del GIS con el mundo real y la visualización en tiempo real
+de los motores de videojuegos, lo que permite crear representaciones 3D detalladas de los datos alojados en ArcGIS, potenciando el análisis y la visualización en proyectos complejos
+como la generación de gemelos digitales, visualización arquitectónica y la simulación.<br>
     <h3>Si desea conocer más detalles solo debe ingresar en el siguiente enlace: https://developers.arcgis.com/python/guide/overview-of-the-arcgis-api-for-python/</h3>
 </div>
